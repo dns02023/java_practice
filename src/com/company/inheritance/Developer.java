@@ -1,6 +1,6 @@
 package com.company.inheritance;
 
-public class Developer {
+public class Developer implements Staff{
     private String name;
     private int age;
     private String specialty;

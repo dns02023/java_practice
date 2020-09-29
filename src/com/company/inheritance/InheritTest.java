@@ -5,11 +5,11 @@ public class InheritTest {
         WebDeveloper mark = new WebDeveloper("Mark", 27);
         Developer kim = new Developer("Kim", 26);
         VisionDeveloper kwon = new VisionDeveloper("Kwon", 24);
+
+        CommerceCompany kakao = new CommerceCompany("KAKAO");
+        mark.getJob(kakao);
         mark.showInfo();
-        kwon.showInfo();
-        kim.showInfo();
-        kim.setSpecialty("Infra");
-        kim.showInfo();
+
     }
 
 

@@ -1,5 +1,7 @@
 package com.company.inheritance;
 
+import java.util.ArrayList;
+
 public class InheritTest {
     public static void main(String[] args){
         WebDeveloper mark = new WebDeveloper("Mark", 27);
@@ -9,6 +11,10 @@ public class InheritTest {
         CommerceCompany kakao = new CommerceCompany("KAKAO");
         mark.getJob(kakao);
         mark.showInfo();
+        ArrayList<Developer> crews = kakao.getDevelopers();
+        for(Developer crew : crews){
+            System.out.println(crew.getName());
+        }
 
     }
 

@@ -1,9 +1,10 @@
 package com.company.inheritance;
 
 public class Developer implements Staff{
-    private String name;
-    private int age;
-    private String specialty;
+    // 하위 클래스에서 접근하게 하려면 protected를 써야함
+    protected String name;
+    protected int age;
+    protected String specialty;
 
     public Developer(){}
 

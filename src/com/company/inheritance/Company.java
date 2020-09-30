@@ -3,8 +3,8 @@ package com.company.inheritance;
 import java.util.ArrayList;
 
 public class Company {
-    private String name;
-    private ArrayList<Developer> developers;
+    protected String name;
+    protected ArrayList<Developer> developers;
 
     public Company(String name){
         this.name = name;

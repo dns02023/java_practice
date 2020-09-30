@@ -7,7 +7,7 @@ public class VisionDeveloper extends Developer{
 
     public VisionDeveloper(String name, int age){
         super(name, age);
-        this.setSpecialty("Computer Vision");
+        this.specialty = "Computer Vision";
     }
 
     @Override

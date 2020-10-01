@@ -1,10 +1,11 @@
 package com.company.inheritance;
 
-public class Developer implements Staff{
+public class Developer{
     // 하위 클래스에서 접근하게 하려면 protected를 써야함
     protected String name;
     protected int age;
     protected String specialty;
+    protected Company job;
 
     public Developer(){}
 
@@ -37,6 +38,15 @@ public class Developer implements Staff{
 
     public void showInfo(){
         System.out.println(this.name + this.age);
+    }
+
+    public void getJob(Company company){
+        company.recruit(this);
+        this.job = company;
+    }
+
+    public void introduceMy(){
+        System.out.println("I'm a Developer!");
     }
 
 

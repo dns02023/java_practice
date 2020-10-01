@@ -3,7 +3,6 @@ package com.company.inheritance;
 public class VisionDeveloper extends Developer{
 
     private int salary;
-    private String job;
 
     public VisionDeveloper(String name, int age){
         super(name, age);
@@ -12,8 +11,11 @@ public class VisionDeveloper extends Developer{
 
     @Override
     public void showInfo(){
-        System.out.println("Vision Developer: " + this.getName() + this.getAge() + this.getSpecialty());
+        System.out.println("Vision Developer: " + this.getName() + this.getAge() + this.getSpecialty() + this.job.name);
     }
 
-
+    @Override
+    public void introduceMy() {
+        System.out.println("I'm good at " + this.specialty);
+    }
 }

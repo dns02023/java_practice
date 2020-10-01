@@ -1,9 +1,6 @@
 package com.company.inheritance;
 
-public class WebDeveloper extends Developer{
-
-    private int salary;
-    private String job;
+public class WebDeveloper extends Developer implements Staff{
 
     public WebDeveloper(String name, int age){
         // 하위 클래스에서의 super는 자신의 상위 클래스의 메모리 공간?을 지칭한다.
@@ -16,15 +13,21 @@ public class WebDeveloper extends Developer{
 
     @Override
     public void showInfo(){
-        System.out.println("Web Developer: " + this.getName() + this.getAge() + this.getSpecialty() + this.job);
+        System.out.println("Web Developer: " + this.getName() + this.getAge() + this.getSpecialty() + this.job.name);
     }
 
+    @Override
+    public void introduceMy() {
+        System.out.println("I'm good at " + this.specialty);
+    }
 
+    @Override
+    public void work() {
+        System.out.println("I'm working with Spring");
+    }
 
-
-
-    public void getJob(Company company){
-        company.recruit(this);
-        this.job = company.getName();
+    @Override
+    public void rest() {
+        System.out.println("I'm in vacation");
     }
 }

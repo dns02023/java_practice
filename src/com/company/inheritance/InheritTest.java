@@ -10,6 +10,8 @@ public class InheritTest {
         Developer kim = new Developer("Kim", 26);
         VisionDeveloper kwon = new VisionDeveloper("Kwon", 24);
 
+
+
         CommerceCompany kakao = new CommerceCompany("KAKAO");
 
         ArrayList<Developer> people = new ArrayList<Developer>();
@@ -20,6 +22,9 @@ public class InheritTest {
         InheritTest test = new InheritTest();
         // 다형성 테스트를 위해 생성
         test.selfIntroduce(people);
+
+        //toString() override 테스트 => ArrayList toString()은 구성 요소들의 각각의 toString()을 출력한다.
+        System.out.println(people);
 
         mark.getJob(kakao);
         mark.showInfo();
@@ -49,6 +54,7 @@ public class InheritTest {
         // Staff 타입으로 생성 => work or rest만 사용가능 => WebDeveloper 인스턴스인 jay에게 work를 호출하면 WebDeveloper의 work를 호출
         Staff jay = new WebDeveloper("Jay", 28);
         jay.work();
+
     }
 
     // 다형성 테스트 : 각 Developer 클래스의 하위 클래스의 각기 다르게 구현된 Override 메서드 출력을 확인

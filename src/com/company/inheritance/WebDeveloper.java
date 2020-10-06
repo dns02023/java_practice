@@ -17,6 +17,14 @@ public class WebDeveloper extends Developer implements Staff{
     }
 
     @Override
+    public String toString() {
+        return "Web Developer{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    @Override
     public void introduceMy() {
         System.out.println("I'm good at " + this.specialty);
     }

@@ -40,6 +40,14 @@ public class Developer{
         System.out.println(this.name + this.age);
     }
 
+    @Override
+    public String toString() {
+        return "Developer{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
     public void getJob(Company company){
         company.recruit(this);
         this.job = company;
@@ -48,7 +56,5 @@ public class Developer{
     public void introduceMy(){
         System.out.println("I'm a Developer!");
     }
-
-
-
+    
 }

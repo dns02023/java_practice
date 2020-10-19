@@ -7,6 +7,8 @@ public class Developer{
     protected String specialty;
     protected Company job;
 
+
+
     public Developer(){}
 
     public Developer(String name, int age){
